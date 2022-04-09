@@ -1,0 +1,186 @@
+
+*{
+		margin: 0;
+		padding: 0;
+}
+
+
+body{
+		height: 100vh;
+		width: 100vw;
+		/*background: red;*/
+		display: flex;
+		justify-content: center;
+}
+.container{
+		margi-left: 40vw;
+		/*background: red;*/
+}
+
+.start-menu{
+		background: #505050;
+		height: 100vh;
+		width: 100vw;
+		position: absolute;
+		/*display: none;*/
+		z-index: 999;
+}
+.title{
+		/*background: blue;*/
+		text-align: center;
+		padding: 20px 0;
+}
+.title img{
+		width: 95%;
+}
+.rapid-container{
+		margin: 10px 0;
+}
+.tap{
+		/*background: brown;*/
+		margin-top: 150px;
+		text-align: center;
+		animation-name: blink;
+		animation-duration: 0.7s;
+		animation-iteration-count: infinite;
+}
+@keyframes blink {
+		0%{opacity: 1;}
+		50%{opacity: 0;}
+		100%{opacity: 0.9;}
+}
+.tap img{
+		width: 90%;
+}
+.rapid-container{
+		background: white;
+	  width: 30%;
+	  text-align: center;
+		border: 1px solid black;
+		border-radius: 12px;
+		margin: auto;
+}
+.rapid-container img{
+		height: 100px;
+		max-height: 230px;
+}
+
+
+
+.gameArea{
+		/*background: pink;*/
+		height: 60vh;
+		overflow: hidden;
+}
+
+#boards{
+		position: absolute;
+		top:0;
+		left:0;
+		display: flex;
+		flex-direction: column;
+		height: 30vh;
+		background: indigo;
+		text-align: center;
+		display:none;
+		z-index: 9999;
+}
+#op-board, #board{
+		text-align: center;
+		background: gray;
+		border: 1px solid black;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 3em;
+		height: 30vh;
+		width: 100vw;
+}
+#boards img{
+		height: 80%;
+		width: auto;
+		margin: auto;
+}
+#score-cont{
+		position: relative;
+		bottom: 35px;
+		text-align: right;
+		margin-right: 5px;
+}
+
+
+.gameArea{
+		width: 100vw;
+}
+.gameArea img{
+		height: 30vh;
+		margin-left: calc(50% - 10vh);
+		transition: 400ms;
+}
+.imgs{
+		position: relative;
+}
+.imgs img{
+		/*background: orange;*/
+		position: absolute;
+		top: -40vh;
+		transform: rotateX(180deg);
+}
+.imgs2{
+		/*background: red;*/
+		height: inherit;
+		position: relative;
+}
+.imgs2 img{
+		position: absolute;
+		bottom:-40vh;
+}
+
+
+.select{
+		display: flex;
+		justify-content: space-around;
+		margin-top: 15px;
+}
+.slct{
+		/*background: purple;*/
+		border: 1px solid black;
+		border-radius: 10px;
+		cursor: pointer;
+		-webkit-tap-highlight-color:transparent;
+}
+.select img{
+		width: 30vw;
+		height: 25vh;
+}
+#rockbtn img{
+		height: 20vh;
+		margin-top: calc(12vh - 10vh);
+}
+
+.slct:active{
+		background: #9e9e9e;
+}
+
+
+@media screen and (min-width:700px){
+		.start-menu{
+				width: 76vh;
+		}
+		
+		.gameArea{
+				width: 76vh;
+		}
+		
+		#board, #op-board{
+				width: 76vh;
+				margin-left: 10vh;
+		}
+		
+		.select{
+				width: 76vh;
+		}
+		.slct img{
+				width: 25vh;
+		}
+}
